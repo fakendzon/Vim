@@ -29,9 +29,14 @@ Plugin 'tpope/vim-commentary'
 "Plugin 'MarcWeber/vim-addon-mw-utils'	" dependencies #1
 "Plugin 'tomtom/tlib_vim'		" dependencies #2
 Plugin 'honza/vim-snippets'		" snippets repo
-Plugin 'sirver/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'sirver/ultisnips'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+
+
+"---------------=== Languages support ===-------------
+" Plugin 'farseer90718/vim-translator'
+" vmap T <Plug>Translate
 
 "---------------=== Languages support ===-------------
 
@@ -95,6 +100,9 @@ set expandtab					"пробелы вместо Tab
 " set smartindent
 let NERDTreeShowHidden=1		"let NERDTree see hidden files
 let @a=expand('%:p')
+set ic                          "Игнорировать регистр при поиске
+set hls is                      "Подсвечивать слово и результаты при поиске  
+
 
 "set background=dark
 "colorscheme solas 
