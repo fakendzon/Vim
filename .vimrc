@@ -125,6 +125,9 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 
+"Нормальная вставка кода
+set pastetoggle=<F3>
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 "let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
