@@ -22,6 +22,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim "установил плагин неп
 Plugin 'tpope/vim-surround'	   	" Parentheses, brackets, quotes, XML tags, and morei
 Plugin 'vim-syntastic/syntastic'	"проверка синтаксиса
 Plugin 'tpope/vim-commentary'
+Plugin 'mileszs/ack.vim'
 
 
 "--------------=== Snippets support ===---------------
