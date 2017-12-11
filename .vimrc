@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'		" let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree' 	    	" Project and file navigation
 set runtimepath^=~/.vim/bundle/ctrlp.vim "установил плагин непривычным способом, набрал :PluginSearch ctrlP, установил, добавил эту строку, заработало
 "Plugin 'majutsushi/tagbar'          	" Class/module browser
+"
 
 "------------------=== Other ===----------------------
 "Plugin 'bling/vim-airline'   	    	" Lean & mean status/tabline for vim
@@ -23,6 +24,8 @@ Plugin 'tpope/vim-surround'	   	" Parentheses, brackets, quotes, XML tags, and m
 Plugin 'vim-syntastic/syntastic'	"проверка синтаксиса
 Plugin 'tpope/vim-commentary'
 Plugin 'mileszs/ack.vim'
+Plugin 'mkitt/tabline.vim'
+" Plugin 'wincent/command-t.vim'
 
 
 "--------------=== Snippets support ===---------------
@@ -68,11 +71,11 @@ filetype plugin on
 filetype plugin indent on
 
 " настройки Vim-Airline
-set laststatus=2
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+" set laststatus=2
+" let g:airline_theme='powerlineish'
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 
@@ -104,22 +107,19 @@ let @a=expand('%:p')
 set ic                          "Игнорировать регистр при поиске
 set hls is                      "Подсвечивать слово и результаты при поиске  
 
-
-"set background=dark
 "colorscheme solas 
-"set background=dark
+" let g:jellybeans_background_color_256=000
 colorscheme jellybeans 
 "colorscheme molokai 
 "colorscheme myterm 
 "colorscheme tomorrow 
 "colorscheme nightly
 
-
-
 " mappings
 map <C-n> :NERDTreeToggle<CR>
 "save in normal mode
 nmap ;w :w<CR>
+vmap "+y :!xclip -f -sel clip
 
 "в режиме вставки можно сменить раскладку нажатием Ctrl-6
 set keymap=russian-jcukenwin
@@ -156,3 +156,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " let g:syntastic_php_checkers = ['php', 'phpcs']	"phpcs - проверка на соответсвие документации (стиля); php - не работает в vim, в консоле работает. Странная особенность некоторые ошибки отлавливаются, некоторые нет, даже командой из коноли php -l, но когда запускаешь на исплонение php выдает ошибку
 let g:syntastic_php_checkers = ['php']	"phpcs - проверка на соответсвие документации (стиля); php - не работает в vim, в консоле работает. Странная особенность некоторые ошибки отлавливаются, некоторые нет, даже командой из коноли php -l, но когда запускаешь на исплонение php выдает ошибку
+
+
+
+" https://defuse.ca/blog/clipboard-over-ssh-with-vim.html
