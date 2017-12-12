@@ -13,8 +13,31 @@ Plugin 'gmarik/Vundle.vim'		" let Vundle manage Vundle, required
 "---------=== Code/project navigation ===-------------
 Plugin 'scrooloose/nerdtree' 	    	" Project and file navigation
 set runtimepath^=~/.vim/bundle/ctrlp.vim "установил плагин непривычным способом, набрал :PluginSearch ctrlP, установил, добавил эту строку, заработало
-"Plugin 'majutsushi/tagbar'          	" Class/module browser
-"
+
+Plugin 'majutsushi/tagbar'          	" Class/module browser
+nmap <F8> :TagbarToggle<CR>
+
+Plugin 'mileszs/ack.vim'
+
+Plugin 'easymotion/vim-easymotion'
+nmap fs <Plug>(easymotion-s)
+nmap fl <Plug>(easymotion-sl)
+let g:EasyMotion_smartcase = 1          " отключаем зависимость от регистра
+let g:EasyMotion_do_shade = 0           " отключаем тень (в момент выбора цели весь текст помечается как комментарий)
+" hi link EasyMotionTarget Search      
+" hi EasyMotionTarget2First ctermfg=202 ctermbg=None cterm=None
+" hi EasyMotionTarget2Second ctermfg=202 ctermbg=None cterm=None
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+let g:easytags_file = './tags'          "записываем теги локально для каждого проекта, вместо ~/.vimtags
+let g:easytags_auto_highlight = 0       "отключаем подсветку тегов
+let g:easytags_events = ['BufWritePost'] "события (:help autocmd-events), которые слушает easytags
+let g:easytags_async = 1                "не блокировать vim во время обновления тег-файла
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+
+
 
 "------------------=== Other ===----------------------
 "Plugin 'bling/vim-airline'   	    	" Lean & mean status/tabline for vim
@@ -23,7 +46,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim "установил плагин неп
 Plugin 'tpope/vim-surround'	   	" Parentheses, brackets, quotes, XML tags, and morei
 Plugin 'vim-syntastic/syntastic'	"проверка синтаксиса
 Plugin 'tpope/vim-commentary'
-Plugin 'mileszs/ack.vim'
 Plugin 'mkitt/tabline.vim'
 " Plugin 'wincent/command-t.vim'
 
