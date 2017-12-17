@@ -30,11 +30,11 @@ let g:EasyMotion_do_shade = 0           " отключаем тень (в мом
 " hi EasyMotionTarget2Second ctermfg=202 ctermbg=None cterm=None
 
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-let g:easytags_file = './tags'          "записываем теги локально для каждого проекта, вместо ~/.vimtags
-let g:easytags_auto_highlight = 0       "отключаем подсветку тегов
-let g:easytags_events = ['BufWritePost'] "события (:help autocmd-events), которые слушает easytags
-let g:easytags_async = 1                "не блокировать vim во время обновления тег-файла
+" Plugin 'xolox/vim-easytags'
+" let g:easytags_file = './tags'          "записываем теги локально для каждого проекта, вместо ~/.vimtags
+" let g:easytags_auto_highlight = 0       "отключаем подсветку тегов
+" let g:easytags_events = ['BufWritePost'] "события (:help autocmd-events), которые слушает easytags
+" let g:easytags_async = 1                "не блокировать vim во время обновления тег-файла
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 
