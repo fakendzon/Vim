@@ -18,6 +18,7 @@ Plugin 'majutsushi/tagbar'          	" Class/module browser
 nmap <F8> :TagbarToggle<CR>
 
 Plugin 'mileszs/ack.vim'
+Plugin 'dyng/ctrlsf.vim'
 
 Plugin 'easymotion/vim-easymotion'
 nmap fs <Plug>(easymotion-s)
