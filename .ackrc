@@ -1,1 +1,29 @@
 --follow
+
+# vi/vim swap files http://vim.org/
+--ignore-file=match:/[._].*\.swp$/
+
+# minified Javascript
+--ignore-file=match:/[.-]min[.]js$/
+--ignore-file=match:/[.]js[.]min$/
+
+# minified CSS
+--ignore-file=match:/[.]min[.]css$/
+--ignore-file=match:/[.]css[.]min$/
+
+# JS and CSS source maps
+--ignore-file=match:/[.]js[.]map$/
+--ignore-file=match:/[.]css[.]map$/
+
+# PDFs, because they pass Perl's -T detection
+--ignore-file=ext:pdf
+
+# Common graphics, just as an optimization
+--ignore-file=ext:gif,jpg,jpeg,png
+
+# Git
+# http://git-scm.com/
+--ignore-directory=is:.git
+
+# core dumps
+--ignore-file=match:/core\.\d+$/
